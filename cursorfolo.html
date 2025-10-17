@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursor Follower</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #000; /* Black background */
+      cursor: none; /* Hide default cursor */
+    }
+
+    /* The circle */
+    .cursor-circle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #0077cc; /* Purple color */
+pointer-events: all; /* Don't block clicks */
+      border: 3px solid  #ffffff;
+      transform: translate(-50%, -50%);
+      transition: transform 0.05s linear; /* Smooth movement */
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="cursor-circle"></div>
+
+  <script>
+    const cursor = document.querySelector('.cursor-circle');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+  </script>
+
+</body>
+</html>

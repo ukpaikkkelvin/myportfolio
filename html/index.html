@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.ukpai kelvin</title>
+    <meta name="description" content="Web Developer & Designer Portfolio">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<style>
+    body.no-scroll {
+    overflow: hidden;
+  }
+      .cursor-circle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #0077cc00; /* Purple color */
+pointer-events: all; /* Don't block clicks */
+      border: 2px solid  purple;
+      transform: translate(-50%, -50%);
+      transition: transform 0.05s linear; /* Smooth movement */
+      z-index: 9999;
+    }
+    
+    .loader-overlay{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+          background: radial-gradient(1000px 500px at -10% 10%, rgba(106, 13, 173, 0.459), transparent 60%),  #0b0b0f;
+    }
+    .loader{
+        width:20%;
+        height: 20%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .circle{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 5px solid #6A0DAD ;
+        border-top:5px solid #9B30FF ;
+       animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg) ;
+        }
+    }
+   .loader-overlay h1{
+        font-family:verdana;
+        color:#fff;
+        
+        text-align: center;
+    }
+</style>
+<body>
+     <div class="cursor-circle"></div>
+
+     <div class="loader-overlay">
+        <div class="loader">
+               <div class="circle">
+
+               </div>
+               <!-- <div class="c1">
+                   <div class="c2">
+
+                   </div>
+               </div> -->
+        </div>
+        <h1>LOADING <span>.</span><span>.</span><span>.</span></h1>
+   </div>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1>ukpai kelvin.</h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <button class="nav-item" data-section="hero">
+                        <span class="nav-icon"><i class="fas fa-home"></i></span>
+                        <span>Home</span>
+                    </button>
+                    <button class="nav-item" data-section="about">
+                        <span class="nav-icon"><i class="fas fa-user"></i></span>
+                        <span>About</span>
+                    </button>
+                    <button class="nav-item" data-section="skills">
+                        <span class="nav-icon"><i class="fas fa-code"></i></span>
+                        <span>Skills</span>
+                    </button>
+                    <button class="nav-item" data-section="portfolio">
+                        <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
+                        <span>Portfo</span>
+                    </button>
+                    <button class="nav-item" data-section="contact">
+                        <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+                        <span>Contact</span>
+                    </button>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="mobile-menu-button">
+                    <button id="menu-toggle" class="menu-toggle">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-nav" class="mobile-nav">
+                <div class="mobile-nav-content">
+                    <button class="mobile-nav-item" data-section="hero">
+                        <span class="nav-icon"><i class="fas fa-home"></i></span>
+                        <span>Home</span>
+                    </button>
+                    <button class="mobile-nav-item" data-section="about">
+                        <span class="nav-icon"><i class="fas fa-user"></i></span>
+                        <span>About</span>
+                    </button>
+                    <button class="mobile-nav-item" data-section="skills">
+                        <span class="nav-icon"><i class="fas fa-code"></i></span>
+                        <span>Skills</span>
+                    </button>
+                    <button class="mobile-nav-item" data-section="portfolio">
+                        <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
+                        <span>Portfolio</span>
+                    </button>
+                    <button class="mobile-nav-item" data-section="contact">
+                        <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+                        <span>Contact</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main-content">
+        
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <button class="button" data-text="Awesome">
+                            <span class="actual-text">&nbsp;ukpai&nbsp;</span>
+                            <span aria-hidden="true" class="hover-text">&nbsp;ukpai&nbsp;</span>
+                        </button>
+                        <span class="name-separator"> </span>
+                        <span class="second-name">kelvin</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                      full-stack web developer
+                    </h2>
+                    <p class="hero-description">
+                        Crafting beautiful, functional, and user-centered digital experiences
+                        with modern technologies and creative design solutions.
+                    </p>
+                </div>
+                <!-- <a href="assets/Kelvin-CV.pdf" download>
+                    <button><i class="fa fa-download"></i> Download CV</button>
+                  </a> -->
+
+                <div class="hero-buttons">
+                    
+                    
+                        <a href="/assets/Ukpai_kelvin_CV.docx" class="btn btn-primary"  download> <i class="fa fa-download"></i> DOWNLOAD CV</a>
+                   
+                 
+                    <button class="btn btn-outline">
+                        View works
+                    </button>
+                </div>
+
+                <div class="social-links">
+                    <a href="mailto:ukpaik45@gmail.com" class="social-link" title="Send Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/2347081338790" class="social-link" title="WhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <div class="scroll-indicator">
+                    <div class="arrow-down"><i class="fas fa-chevron-down"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title">
+                            About <span class="purple-text">Me</span>
+                        </h2>
+                        <div class="about-content">
+                            <p>
+                                Hi I'm a passionate web developer and designer with over 2 years of experience
+                                creating digital solutions that bridge the gap between functionality and aesthetics.
+                            </p>
+                            <p>
+                                My journey began with a curiosity for how things work on the web, which evolved
+                                into a deep love for crafting user experiences that are not only beautiful but
+                                also intuitive and accessible.
+                            </p>
+                            <p>
+                                When I'm not coding, you'll find me exploring new design trends, contributing to
+                                open-source projects, or enjoying a good cup of coffee while sketching out ideas
+                                for my next creative project.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <div class="image-container">
+                            <div class="image-placeholder">
+                                <div class="initials">UK</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="skills-container">
+                <h2 class="section-title">
+                    My <span class="purple-text">Skills</span>
+                </h2>
+
+                <div class="skills-grid">
+                    <!-- Technical Proficiency -->
+                    <div class="skills-column">
+                        <h3 class="skills-subtitle">Technical Proficiency</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">HTML</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">CSS</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">40%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Bootstrap</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">MySQL</span>
+                                    <span class="skill-percent">82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 82%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-column">
+                        <h3 class="skills-subtitle">Tools & Technologies</h3>
+                        <div class="tools-grid">
+                            <div class="tool-item">HTML</div>
+                            <div class="tool-item">CSS</div>
+                            <div class="tool-item">JavaScript</div>
+                            <div class="tool-item">Bootstrap</div>
+                            <div class="tool-item">React</div>
+                            <div class="tool-item">PHP</div>
+                            <div class="tool-item">MySQL</div>
+                            <div class="tool-item">VS Code</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <div class="portfolio-container">
+                <h2 class="section-title">
+                    My <span class="purple-text">Portfolio</span>
+                </h2>
+                
+                <div class="portfolio-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Project 1</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">clothing store</h3>
+                            <p class="project-description">
+                                A modern e-commerce platform built with html and css and js, featuring real-time inventory management and payment processing.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">html</span>
+                                <span class="tech-tag">css</span>
+                                <span class="tech-tag">js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Project 2</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">To-do-list App</h3>
+                            <p class="project-description">
+                                     a simple app that let's you keep track of your important chores.                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Socket.io</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Project 3</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Weather Dashboard</h3>
+                            <p class="project-description">
+                                A responsive weather dashboard with location-based forecasts, interactive maps, and weather alerts.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">html</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Charts.js</span>
+                               
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <h2 class="section-title">
+                    Get In <span class="purple-text">Touch</span>
+                </h2>
+                <p class="contact-description">
+                    Ready to bring your ideas to life? Let's discuss your next project.
+                </p>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:ukpaik45@gmail.com" class="contact-link">ukpaik45@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+2347081338790" class="contact-link">+234 7081 338 790</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>lagos, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="6dc7ed91-3702-4e3f-ba1d-acb574e9f653">
+                        
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div class="form-status" aria-live="polite" role="status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    const cursor = document.querySelector('.cursor-circle');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+  </script>
+  <script>
+    window.addEventListener('load', () => {
+  document.body.classList.add('no-scroll');
+  setTimeout(() => {
+    document.querySelector(".loader-overlay").style.display = "none";
+    document.querySelector(".loader").style.display = "block";
+    document.body.classList.remove('no-scroll');
+  }, 3000);
+});
+  </script>
+</body>
+</html>

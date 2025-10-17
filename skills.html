@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .skills-section{ 
+        background: radial-gradient(1000px 500px at -10% 10%, rgba(106,13,173,0.18), transparent 60%),  #0b0b0f;
+     }
+.skills-container{
+     max-width:1100px; 
+     margin: 0 auto; 
+     padding: 0 24px; 
+    }
+.skills-grid{
+     display: grid;
+      grid-template-columns: 1fr 1fr; 
+     gap: 36px;
+     }
+.skills-subtitle{
+     margin-bottom: 12px;
+      font-size: 18px; 
+     color:#b26dff; 
+     letter-spacing: .5px; 
+    }
+
+.skill-bars{
+     display: flex; 
+    flex-direction: column; 
+    gap: 14px; 
+}
+.skill-item{
+     padding: 14px;
+     border-radius: 12px;
+     background: linear-gradient(180deg, rgba(20,20,28,0.9), rgba(12,12,18,0.9));
+     border: 1px solid rgba(155, 48, 255, 0.2);
+ }
+.skill-header{
+     display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 8px; 
+}
+.skill-name{ 
+    color: #fff;
+     font-weight: 600;
+ }
+.skill-percent{ 
+    color:#b26dff;
+     font-weight: 600; 
+}
+.skill-bar{
+    
+    height: 8px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 999px;
+      overflow: hidden;
+     }
+.skill-progress{
+     height: 100%;
+     background: linear-gradient(135deg,  #6A0DAD,  #9B30FF ); 
+    border-radius: 999px;
+     box-shadow: 0 4px 16px rgba(155,48,255,0.3);
+ }
+
+.tools-grid{
+     display: grid; 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 12px;
+ }
+.tool-item{
+    color: #fff;
+     padding: 12px 14px; 
+     text-align: center;
+      border-radius: 12px; 
+      border: 1px solid rgba(155,48,255,0.25);
+       background: linear-gradient(180deg, rgba(18,18,26,1), rgba(10,10,16,1)); 
+       transition: transform 150ms ease, box-shadow 250ms ease, border-color 250ms ease; 
+       }
+</style>
+<body>
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <h2 class="section-title">
+                My <span class="purple-text">Skills</span>
+            </h2>
+
+            <div class="skills-grid">
+                <!-- Technical Proficiency -->
+                <div class="skills-column">
+                    <h3 class="skills-subtitle">Technical Proficiency</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CSS</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Bootstrap</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-column">
+                    <h3 class="skills-subtitle">Tools & Technologies</h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">HTML</div>
+                        <div class="tool-item">CSS</div>
+                        <div class="tool-item">JavaScript</div>
+                        <div class="tool-item">Bootstrap</div>
+                        <div class="tool-item">React</div>
+                        <div class="tool-item">PHP</div>
+                        <div class="tool-item">MySQL</div>
+                        <div class="tool-item">VS Code</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
